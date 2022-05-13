@@ -12,12 +12,19 @@ function resizeListener() {
   */
   const w = window.innerWidth;
   const h = window.innerHeight;
-  if (w < 300) {
+  if (w < 500) {
+    document.body.style.backgroundColor = "red";
     assign5div.classList.add("cbg-color-red");
-  } else if (w < 500) {
+  } else if (w < 600) {
+    document.body.style.backgroundColor = "green";
     assign5div.classList.add("cbg-color-green");
-  } else if (w < 800) {
+  } else if (w < 700) {
+    document.body.style.backgroundColor = "blue";
     assign5div.classList.add("cbg-color-blue");
+  } else if (w < 900) {
+    document.body.style.backgroundColor = "yellow";
+  } else {
+    document.body.style.backgroundColor = "white";
   }
 
   inside.textContent = `window size(w,h): ${window.innerWidth}, ${window.innerHeight}`;
